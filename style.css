@@ -1,0 +1,303 @@
+body {
+    padding: 2rem;
+    margin: auto;
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 660px;
+    font-family: "WenDaoLuoHuaKaiSong-2";
+
+}
+
+@font-face {
+    font-family: "WenDaoLuoHuaKaiSong-2";
+    src: url("./src/fonts/WenDaoLuoHuaKaiSong-2.ttf");
+}
+
+.myday {
+    display: inline;
+    margin: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.biaoji {
+    float: right;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: end;
+}
+
+.todo-date {
+    position: relative;
+    margin: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* 第一部分 输入区域================================================================================================ */
+
+.input-area {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+
+
+}
+
+.input-task {
+    position: absolute;
+    left: 1.8rem;
+    color: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.input-buttons {
+    display: flex;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.btn {
+    color: white;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 2rem;
+    font-size: 18px;
+    letter-spacing: 1px;
+
+}
+
+.confirm-btn {
+    background-color: #339633;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #b12929;
+    cursor: pointer;
+}
+
+input {
+    background-color: #4b3ec0;
+    border: none;
+    padding: 1rem;
+    width: 15rem;
+    border-radius: 2rem;
+    outline: 0;
+    transition: all 0.35s ease-in-out;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+input::placeholder {
+    color: white;
+    text-align: center;
+}
+
+.input-focus {
+    width: 20rem;
+    background-color: white;
+    border: 2px solid lightgray;
+    cursor: text;
+}
+
+/* 第二部分 待办区域============================================================================================= */
+.todo-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.todo-area {
+    margin-top: 1rem;
+}
+
+.todo-header {
+    font-size: 1rem;
+
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.todo-card {
+    height: 5rem;
+    width: 15rem;
+    border-radius: 1.4rem;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+    transition: all 0.35s ease-in-out;
+}
+
+.edit-block {
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    pointer-events: none;
+}
+
+.card-orange {
+    background-color: #ec8657
+}
+
+.card-blue {
+    background-color: #5fcff1
+}
+
+.card-green {
+    background-color: #61d484
+}
+
+.card-yellow {
+    background-color: #f8ec7f
+}
+
+.card-purple {
+    background-color: #8257e7
+}
+
+.card-grey {
+    background-color: rgba(111, 112, 121, 0.856)
+}
+
+.icons-bar {
+    padding: 0 1rem;
+    box-sizing: border-box;
+    /* flex-grow: 2; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0.4rem;
+    /* border:2px solid black; */
+
+}
+
+.group-icons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.done-icon-box {
+    position: relative;
+    transition: all 0.35s ease-in-out;
+    cursor: pointer;
+
+}
+
+.icon-box {
+    position: relative;
+    transition: all 0.35s ease-in-out;
+    cursor: pointer;
+
+}
+
+.icon-init {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.svg-init {
+    transform: rotate(15deg);
+}
+
+.svg-icon {
+    transition: transform 0.35s ease-in-out;
+}
+
+.icon-box-done-init {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.svg-done-init {
+    transform: rotate(-15deg);
+}
+
+.color-select {
+    position: absolute;
+    display: flex;
+    gap: 0.8rem;
+    left: -3.5rem;
+    top: -2rem;
+
+    transition: all 0.35s ease-in-out;
+}
+
+.color-init {
+    opacity: 0;
+    transform: translatey(10px);
+}
+
+.color-select>span {
+    height: 0.8rem;
+    width: 0.8rem;
+    border: 2px solid black;
+    border-radius: 100%
+}
+
+.delete-circle {
+    position: absolute;
+    transform: rotate(-90deg);
+    left: 0;
+}
+
+.delete-circle>circle {
+    transition: all 2s linear;
+}
+
+/* 第三部分 完成区域============================================================================================== */
+.done-header {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.done-card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.done-card {
+    height: 5rem;
+    width: 15rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    border-radius: 1.4rem;
+    padding: 1rem;
+    position: relative;
+    transition: all 0.35s ease-in-out;
+    flex-shrink: 0;
+}
+
+.done-card-icons {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    bottom: 0.6rem;
+    gap: 0.5rem;
+}
+
+.done-card-init {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.delete-circle {
+    position: absolute;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+.delete-circle>circle {
+    transition: all 2s linear;
+}
